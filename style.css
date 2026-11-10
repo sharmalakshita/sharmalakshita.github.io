@@ -291,11 +291,12 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 .hero .market { margin-top: 22px; font-weight: 600; }
 .inst { font-size: 1.02rem; margin: 6px 0 2px; }
 .course h3 { font-weight: 500; }
-.abstract-toggle { margin-top: 8px; }
-.abstract-toggle summary { display: inline-block; cursor: pointer; color: var(--accent); font-weight: 500; font-size: 0.92rem; list-style: none; }
-.abstract-toggle summary::-webkit-details-marker { display: none; }
-.abstract-toggle summary::before { content: "\25B8\00a0"; }
-.abstract-toggle[open] summary::before { content: "\25BE\00a0"; }
-.abstract-toggle summary:hover { text-decoration: underline; }
-.abstract-toggle .abstract { margin-top: 10px; }
 .abstract { text-align: justify; }
+
+/* Abstract / Draft toggles under a paper */
+.toggles { display: flex; gap: 22px; margin-top: 8px; }
+.toggle { background: none; border: 0; padding: 0; font: inherit; font-size: 0.92rem; font-weight: 500; color: var(--accent); cursor: pointer; }
+.toggle::before { content: "\25B8\00a0"; }
+.toggle[aria-expanded="true"]::before { content: "\25BE\00a0"; }
+.toggle:hover { text-decoration: underline; }
+.panel { margin-top: 10px; }
